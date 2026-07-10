@@ -84,3 +84,14 @@ SELECT
 FROM telecom_churn
 GROUP BY contract
 ORDER BY churn_rate DESC;
+
+SELECT
+    contract,
+    COUNT(*) AS customers
+FROM telecom_churn
+GROUP BY contract
+HAVING COUNT(*) > 1000;
+
+
+SELECT DISTINCT contract
+FROM telecom_churn;
